@@ -1,0 +1,47 @@
+#IMPLEMENTATION
+
+-- Table structure for table `donation`
+
+CREATE TABLE `donation` (
+  `p_id` int(10) NOT NULL,
+  `d_date` date NOT NULL,
+  `d_time` time NOT NULL,
+  `d_quantity` int(1) NOT NULL
+) 
+
+-- Table structure for table `person`
+
+CREATE TABLE `person` (
+  `p_id` int(10) NOT NULL,
+  `p_name` varchar(25) NOT NULL,
+  `p_phone` char(10) NOT NULL,
+  `p_dob` date NOT NULL,
+  `p_address` varchar(100) DEFAULT NULL,
+  `p_gender` char(1) NOT NULL,
+  `p_blood_group` varchar(3) NOT NULL,
+  `p_med_issues` varchar(100) DEFAULT NULL
+) 
+
+-- Table structure for table `receive`
+
+CREATE TABLE `receive` (
+  `p_id` int(10) NOT NULL,
+  `r_date` date NOT NULL,
+  `r_time` time NOT NULL,
+  `r_quantity` int(1) NOT NULL,
+  `r_hospital` varchar(50) NOT NULL
+) 
+
+-- Table structure for table `stock`
+
+CREATE TABLE `stock` (
+  `s_blood_group` varchar(3) NOT NULL,
+  `s_quantity` int(5) NOT NULL DEFAULT 0
+) 
+
+-- Table structure for table `user`
+
+CREATE TABLE `user` (
+  `username` varchar(10) NOT NULL,
+  `password` varchar(16) NOT NULL
+)
